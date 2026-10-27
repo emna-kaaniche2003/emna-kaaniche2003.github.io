@@ -335,14 +335,13 @@ header nav a,.h-actions .btn{white-space:nowrap}
 .lang-sw{display:inline-grid;place-items:center;min-width:40px;height:40px;padding:0 10px;border-radius:999px;border:1px solid var(--line);background:var(--soft);color:var(--head);font:600 .8rem/1 'Inter',system-ui,sans-serif;letter-spacing:.06em;text-decoration:none;transition:border-color .25s,transform .25s;flex:none}
 .lang-sw:hover,.lang-sw:focus-visible{border-color:var(--accent);transform:translateY(-1px)}
 
-/* ============ En-tête : tout doit tenir dans la pilule (FR + bouton EN) ============ */
-header[role=banner]{max-width:1240px}
+/* ============ En-tête : la pilule s adapte à son contenu (FR + bouton EN) ============ */
+header[role=banner]{width:max-content;min-width:min(1180px,calc(100% - 24px));max-width:calc(100% - 24px)}
 header nav{flex:1 1 auto;min-width:0}
-header nav ul{justify-content:center;gap:0}
-header nav a{padding:8px 11px}
-.h-actions{flex:none;gap:8px}
-@media(min-width:1181px) and (max-width:1380px){
-  header nav a{padding:8px 8px;font-size:.84rem}
+header nav ul{justify-content:center}
+.h-actions{flex:none}
+@media(min-width:1021px) and (max-width:1380px){
+  header nav a{padding:8px 9px;font-size:.84rem}
   .cv span{display:none}
   .cv{padding:9px 11px}
 }
